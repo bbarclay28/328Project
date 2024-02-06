@@ -1,0 +1,113 @@
+header {
+  margin: 0.5vw;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+body {
+  margin: .5vw;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+nav {
+  background-color: #1F3A4A; /* Using the dark blue as the background */
+  display: flex;
+  justify-content: space-between; /* Distributes items evenly */
+  flex-wrap: nowrap; /* Prevents items from wrapping to the next line */
+  flex-direction: row;
+  align-items: center; /* This will center the items horizontally */
+}
+
+nav img.logo {
+  height: 50px; /* Adjust to match the navbar items */
+  margin: 0; /* Remove any extra spacing */
+  vertical-align: middle; /* Keep this to align the logo vertically */
+  background-color: #0a5785; /* Darker shade of blue estimation from the logo */
+  color: #fff; /* White text for better contrast */
+}
+
+
+nav a {
+  color: #FFFFFF; /* White text color */
+  padding: 10px 15px; /* Adjust as needed */
+  text-decoration: none; /* Removes the underline */
+  display: inline-block;
+  transition: background-color 0.3s; /* Smooth transition for hover effects */
+  border-radius: 7%;
+}
+
+nav a:hover {
+  background-color: #5AC2C9; /* Light Blue/Turquoise for hover */
+  color: #1F3A4A; /* Dark blue text when hovered */
+}
+
+/* If you have a selected/current page indication */
+.nav a.active {
+  background-color: #5AC2C9; 
+  color: #1F3A4A; 
+}
+
+.hero-section {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
+    url('./assets/img/witx-header.JPG');
+  background-size: cover;
+  height: 600px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hero-section-header {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 50px;
+  font-style: italic;
+  color: #fff;
+  text-shadow: 2px 3px 3px #222;
+  display: inline-block;
+
+}
+footer {
+  margin: .5vw;
+  background-color: #ffffff;
+  display: flex;
+    flex-direction: column;
+    align-items: center; /* This will center the content horizontally */
+    justify-content: center; /* This will center the content vertically, if desired */
+    text-align: center; /* To center the text of the <p> and <a> elements */
+}
+
+footer p {
+  text-align: center;
+}
+footer a {
+  align-self: center;
+  color: #0072B5;
+}
+
+.button {
+  background-color: #0072B5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.button:hover {
+  background-color: #005387;
+}
+
+
+@media (max-width: 768px) {  /* This is just an example breakpoint */
+  nav {
+      flex-direction: column; /* Stack nav items vertically on small screens */
+  }
+  nav a {
+      font-size: 2.5vw; /* Adjust as needed */
+      padding: 5px 0;  /* Adjust padding/margins as necessary for smaller screens */
+  }
+}
