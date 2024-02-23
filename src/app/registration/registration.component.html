@@ -20,7 +20,7 @@
       <!-- First Name -->
       <label class="control-label"  for="first">First Name</label>
       <div class="controls">
-        <input type="text" id="first" name="first" placeholder="" class="input-xlarge">
+        <input type="text" id="first" name="firstName" placeholder="" class="input-xlarge" (ngModel)="firstName">
         <p class="help-block">Please enter your First Name</p>
       
       </div>
@@ -30,7 +30,7 @@
       <!-- Last Name -->
       <label class="control-label" for="last">Last Name</label>
       <div class="controls">
-        <input type="text" id="last" name="last" placeholder="" class="input-xlarge">
+        <input type="text" id="last" name="lastName" placeholder="" class="input-xlarge" (ngModel)="lastName">
         <p class="help-block">Please enter your Last Name</p>
       </div>
     </div>
