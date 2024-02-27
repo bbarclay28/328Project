@@ -16,14 +16,20 @@ status: string = '';
 fullTime: boolean = false;
 partTime: boolean = false;
 student: boolean = false;
-sessionOne: boolean = false;
+sessionOneSelected: boolean = false;
+selectedTimeSlot: boolean = true;
 timeSlot1: boolean = false;
 timeSlot2: boolean = false;
 timeSlot3: boolean = false;
-//test: string = "";
+test: string = "";
 
 //Method that outputs a string with stored variables when register button is clicked. Used for Testing
   onClickRegister(){
     this.fullName = "Your full name is " + this.firstName + " " + this.lastName
+
+    if(this.fullTime == true){
+        this.test = "You are Full-Time";
+    }
   }
+  
 }
