@@ -16,6 +16,10 @@ status: string = '';
 fullTime: boolean = false;
 partTime: boolean = false;
 student: boolean = false;
+sessionOne: boolean = false;
+timeSlot1: boolean = false;
+timeSlot2: boolean = false;
+timeSlot3: boolean = false;
 //test: string = "";
 
 //Method that outputs a string with stored variables when register button is clicked. Used for Testing
