@@ -13,6 +13,7 @@ firstName: string = '';
 lastName: string = '';
 fullName: string = '';
 status: string = '';
+email: string = '';
 fullTime: boolean = false;
 partTime: boolean = false;
 student: boolean = false;

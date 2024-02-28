@@ -32,6 +32,12 @@
         <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="lastName">
       </div>
 
+      <!--Email Input-->
+      <div class="col-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" [placeholder]="status === 'faculty' || status === 'student' ? 'Enter your @.edu email' : 'Enter your email'">
+      </div>
+
       <!--Employed Radio Button-->
       <div class="col-12">
         <div class="form-check">
