@@ -17,6 +17,7 @@ email: string = ' ';
 fullTime: boolean = false;
 partTime: boolean = false;
 student: boolean = false;
+title: string = "false";
 sessionOneSelected: boolean = false;
 selectedTimeSlotOne: boolean = true;
 sessionTwoSelected: boolean = false;
