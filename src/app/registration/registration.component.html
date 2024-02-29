@@ -40,7 +40,8 @@
       </div>
 
       <!--Employed Radio Button-->
-      <div class="col-12">
+      <div class="col-md-6">
+        <p class="registersessions">Select Employment Status</p>
         <div class="form-check">
           <input class="form-check-input" type="radio" id="employed" [(ngModel)] ="status" name="Status" [value]="true">
           <label class="form-check-label" for="employed">
@@ -55,7 +56,7 @@
             Unemployed
           </label>
         </div>
-        <br>
+  
 
         <!--CheckBoxes-->
         <div class="Checkboxes" *ngIf = "status">
@@ -81,6 +82,8 @@
       </div>
           
       <!--Session One Checkbox-->
+    <div class="col-md-4 sessions">
+      <p class="registersessions">Register for sessions</p>
       <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" id="sessionOne" [(ngModel)]="sessionOneSelected" name="sessionOne">
         <label class="form-check-label" for="sessionOne">Session One</label>
@@ -89,19 +92,41 @@
       <!--Radio buttons for Session One time slots-->
       <div *ngIf="sessionOneSelected" class="col-12">
         <div class="form-check">
-            <input class="form-check-input" type="radio" id="timeSlot1" [(ngModel)]="selectedTimeSlot" name="timeSlot" value="9AM">
+            <input class="form-check-input" type="radio" id="timeSlot1" [(ngModel)]="selectedTimeSlotOne" name="timeSlot" value="9AM">
             <label class="form-check-label" for="timeSlot1">10:00 AM - 11:00 AM</label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" id="timeSlot2" [(ngModel)]="selectedTimeSlot" name="timeSlot" value="11AM">
+            <input class="form-check-input" type="radio" id="timeSlot2" [(ngModel)]="selectedTimeSlotOne" name="timeSlot" value="11AM">
             <label class="form-check-label" for="timeSlot2">11:00 AM - 12:00 PM</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" id="timeSlot3" [(ngModel)]="selectedTimeSlot" name="timeSlot" value="1PM">
+          <input class="form-check-input" type="radio" id="timeSlot3" [(ngModel)]="selectedTimeSlotOne" name="timeSlot" value="1PM">
           <label class="form-check-label" for="timeSlot3">1:00 PM - 2:00 PM</label>
         </div>
       </div>
 
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="sessionOne" [(ngModel)]="sessionTwoSelected" name="sessionOne">
+        <label class="form-check-label" for="sessionOne">Session Two</label>
+      </div>
+
+      <!--Radio buttons for Session One time slots-->
+      <div *ngIf="sessionTwoSelected" class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" id="timeSlot1" [(ngModel)]="selectedTimeSlotTwo" name="timeSlot" value="9AM">
+            <label class="form-check-label" for="timeSlot1">10:00 AM - 11:00 AM</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" id="timeSlot2" [(ngModel)]="selectedTimeSlotTwo" name="timeSlot" value="11AM">
+            <label class="form-check-label" for="timeSlot2">11:00 AM - 12:00 PM</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="timeSlot3" [(ngModel)]="selectedTimeSlotTwo" name="timeSlot" value="1PM">
+          <label class="form-check-label" for="timeSlot3">1:00 PM - 2:00 PM</label>
+        </div>
+      </div>
+
+    </div>
       <!--Register Button-->
       <div class="col-12">
         <button class="btn btn-success" (click)="onClickRegister()">Register</button>
