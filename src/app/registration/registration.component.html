@@ -81,42 +81,11 @@
         </div>
       </div>
 
-      <!--Are you a student, faculty, or professional checkboxes-->
-      <div>
-        
-        <p>Are you a student, faculty, or professional?</p>
-        <div>
-          <input type="checkbox" id="student" name="title" [(ngModel)]="title" [value]="true" >
-          <label for="student">Student</label>
-        </div>
-        <div>
-          <input type="checkbox" id="faculty" name="title">
-          <label for="faculty">Faculty</label>
-        </div>
-        <div>
-          <input type="checkbox" id="professional" name="title">
-          <label for="professional">Professional</label>
-        </div>
-      </div>
-      <div class="school-text" *ngIf = "title">
-        <input type="text" placeholder="School name">
-      </div>
-
-      <!--Dinner Attendance radio button-->
-      <div>
-        <fieldset>
-        <p>Will you be attending the dinner?</p>
-          <input type="radio" id="yes" name="agreement" value="yes">
-          <label for="yes">Yes</label><br>
-  
-          <input type="radio" id="no" name="agreement" value="no">
-          <label for="no">No</label><br>
-        </fieldset>
-      </div>
-          
-      <!--Session One Checkbox-->
+       
     <div class="col-md-4 sessions">
       <p class="registersessions">Register for sessions</p>
+
+      <!--Session One Checkbox-->
       <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" id="sessionOne" [(ngModel)]="sessionOneSelected" name="sessionOne">
         <label class="form-check-label" for="sessionOne">Session One</label>
@@ -138,12 +107,13 @@
         </div>
       </div>
 
+      <!--Session Two Checkbox-->
       <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="sessionOne" [(ngModel)]="sessionTwoSelected" name="sessionOne">
-        <label class="form-check-label" for="sessionOne">Session Two</label>
+        <input class="form-check-input" type="checkbox" id="sessionTwo" [(ngModel)]="sessionTwoSelected" name="sessionTwo">
+        <label class="form-check-label" for="sessionTwo">Session Two</label>
       </div>
 
-      <!--Radio buttons for Session One time slots-->
+      <!--Radio buttons for Session Two time slots-->
       <div *ngIf="sessionTwoSelected" class="col-12">
         <div class="form-check">
             <input class="form-check-input" type="radio" id="timeSlot1" [(ngModel)]="selectedTimeSlotTwo" name="timeSlot" value="9AM">
@@ -158,8 +128,41 @@
           <label class="form-check-label" for="timeSlot3">1:00 PM - 2:00 PM</label>
         </div>
       </div>
-
     </div>
+
+      <!--Are you a student, faculty, or professional checkboxes-->
+      <div class="col-md-6">
+        <p class="registersessions">Are you a student, faculty, or professional?</p>
+        <div>
+          <input type="checkbox" id="student" name="title" [(ngModel)]="title" [value]="true">
+          <label for="student" class="checkspace">Student</label>
+        </div>
+        <div>
+          <input type="checkbox" id="faculty" name="title" >
+          <label for="faculty" class="checkspace">Faculty</label>
+        </div>
+        <div>
+          <input type="checkbox" id="professional" name="title" >
+          <label for="professional" class="checkspace">Professional</label>
+        </div>
+
+        <div class="school-text" *ngIf = "title">
+          <input type="text" placeholder="School name">
+        </div>
+      </div>
+
+      
+      <!--Dinner Attendance radio button-->
+      <div class="col-md-4">
+        <p class="registersessions">Will you be attending the dinner?</p>
+          <input type="radio" id="yes" name="agreement" value="yes">
+          <label for="yes" class="checkspace">Yes</label><br>
+  
+          <input type="radio" id="no" name="agreement" value="no">
+          <label for="no" class="checkspace">No</label><br>
+      </div>
+    
+    
       <!--Register Button-->
       <div class="col-12">
         <button class="btn btn-success" (click)="onClickRegister()">Register</button>
