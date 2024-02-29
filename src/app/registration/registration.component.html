@@ -85,15 +85,18 @@
       <div>
         
         <p>Are you a student, faculty, or professional?</p>
-        <input type="checkbox" id="student" name="title" [(ngModel)]="title" [value]="true" >
-        <label for="student">Student</label>
-        
-        <input type="checkbox" id="faculty" name="title">
-        <label for="faculty">Faculty</label>
-
-        <input type="checkbox" id="professional" name="title">
-        <label for="professional">Professional</label>
-      
+        <div>
+          <input type="checkbox" id="student" name="title" [(ngModel)]="title" [value]="true" >
+          <label for="student">Student</label>
+        </div>
+        <div>
+          <input type="checkbox" id="faculty" name="title">
+          <label for="faculty">Faculty</label>
+        </div>
+        <div>
+          <input type="checkbox" id="professional" name="title">
+          <label for="professional">Professional</label>
+        </div>
       </div>
       <div class="school-text" *ngIf = "title">
         <input type="text" placeholder="School name">
