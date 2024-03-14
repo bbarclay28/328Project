@@ -16,7 +16,6 @@ status: string = '';
 email: string = ' ';
 fullTime: boolean = false;
 partTime: boolean = false;
-student: boolean = false;
 title: boolean = false;
 sessionOneSelected: boolean = false;
 selectedTimeSlotOne: boolean = true;
