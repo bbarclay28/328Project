@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './componants/core/layout/header/header.component';
-import { FooterComponent } from './componants/core/layout/footer/footer.component';
-import { RegistrationComponent } from './componants/registration/registration.component';
-import { HomeComponent } from './componants/home/home.component';
+import { HeaderComponent } from './components/core/layout/header/header.component';
+import { FooterComponent } from './components/core/layout/footer/footer.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [

@@ -8,7 +8,3 @@ export class EmploymentStatus{
     }
 }
 
-export enum jobType{
-    fullTime = 0,
-    partTime = 1
-}

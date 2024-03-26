@@ -9,10 +9,11 @@ import {register} from '../../models/register.model.js'
 })
 export class RegistrationComponent{
 
-register : register;
+  register : register;
+  title = false;
 
-constructor(){
-  this.register = new register();
-}
-  
+  constructor(){
+    this.register = new register();
+  }
+    
 }

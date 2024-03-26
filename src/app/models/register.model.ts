@@ -1,5 +1,5 @@
 import { personType} from './person-type.model.js';
-import { EmploymentStatus, jobType } from './employment.model.js';
+import { EmploymentStatus} from './employment.model.js';
 import { session } from './session.model.js';
 
 export class register{
@@ -13,7 +13,6 @@ export class register{
     sessionOne: session
     sessionTwo: session
     employmentStatus: EmploymentStatus
-    jobType: jobType
     personType: personType
     
     
@@ -27,12 +26,7 @@ export class register{
            this.sessionOne = new session();
            this.sessionTwo = new session();
            this.personType = personType.faculty;
-           this.jobType = jobType.fullTime;
-           this.employmentStatus = new EmploymentStatus();
-
-           
-            
-           
+           this.employmentStatus = new EmploymentStatus(); 
     }
 
 }
