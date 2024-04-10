@@ -1,32 +1,22 @@
-import { personType} from './person-type.model.js';
-import { EmploymentStatus} from './employment.model.js';
-import { session } from './session.model.js';
+import { personType} from './persontype.model';
+import {employmentType} from './employment.model';
+import { session } from './session.model';
+import { person } from './person.model';
+import { attendee } from './attendee.model';
 
-export class register{
+export class Register{
 
     //Fields 
-    firstName: string
-    lastName: string
-    email: string
-    school: string;
-    dinnerAttendance: boolean
+    attendee: attendee
     sessionOne: session
     sessionTwo: session
-    employmentStatus: EmploymentStatus
-    personType: personType
+    isAttendingDinner: boolean
     
-    
-
     constructor (){
-           this.firstName = "";
-           this.lastName = "";
-           this.email = "";
-           this.dinnerAttendance = false;
-           this.school = "";
+           this.attendee = new attendee();
            this.sessionOne = new session();
            this.sessionTwo = new session();
-           this.personType = personType.faculty;
-           this.employmentStatus = new EmploymentStatus(); 
+           this.isAttendingDinner = false;
     }
 
 }

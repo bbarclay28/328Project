@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import {register} from '../../models/register.model.js'
+import {Register} from '../../models/register.model'
 
 
 @Component({
@@ -9,11 +9,11 @@ import {register} from '../../models/register.model.js'
 })
 export class RegistrationComponent{
 
-  register : register;
+  register : Register;
   title = false;
 
   constructor(){
-    this.register = new register();
+    this.register = new Register();
   }
     
 }

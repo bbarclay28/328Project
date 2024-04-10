@@ -1,10 +1,6 @@
-export class EmploymentStatus{
-    isEmployed : boolean;
-    employmentType : string;
+export enum employmentType{
+    unset = 0,
+    fullTime = 1,
+    partTime = 2
 
-    constructor (){
-        this.isEmployed = false;
-        this.employmentType  = "";
-    }
 }
-
