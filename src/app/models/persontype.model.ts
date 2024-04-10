@@ -1,7 +1,9 @@
-export enum personType{
-    unset = 0,
-    student = 1,
-    faculty = 2,
-    professional = 3
+export class personType {
+  static getAllPersonTypes() {
+    return [
+      { id: 1, title: 'Student', isSelected: false },
+      { id: 2, title: 'Faculty', isSelected: false },
+      { id: 3, title: 'Professional', isSelected: false },
+    ];
+  }
 }
-
