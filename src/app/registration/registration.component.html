@@ -23,19 +23,19 @@
     <!--First Name Input-->
     <form class="row g-3">
       <div class="col-md-6">
-        <label for="firstName" class="form-label">First Name</label>
+        <label for="firstName" class="form-label bold">First Name</label>
         <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" [(ngModel)]="firstName">
       </div>
 
       <!--Last Name Input-->
       <div class="col-md-6">
-        <label for="lastName" class="form-label">Last Name</label>
+        <label for="lastName" class="form-label bold">Last Name</label>
         <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" [(ngModel)]="lastName">
       </div>
 
       <!--Email Input-->
       <div class="col-12">
-        <label for="email" class="form-label">Email</label>
+        <label for="email" class="form-label bold">Email</label>
         <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" [placeholder]="status === 'faculty' || status === 'student' ? 'Enter your @.edu email address' : 'Enter your email address'">
       </div>
 
@@ -45,7 +45,7 @@
         <div class="form-check">
           <input class="form-check-input" type="radio" id="employed" [(ngModel)] ="status" name="Status" [value]="true">
           <label class="form-check-label" for="employed">
-            Employed or Student
+            Employed
           </label>
         </div>
 
@@ -73,11 +73,6 @@
             <label class="form-check-label" for="flexSwitchCheckChecked">Part-Time</label>
           </div>
 
-          <!--Student CheckBox-->
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" [checked]="student" (change)="student = !student">
-            <label class="form-check-label" for="flexSwitchCheckDisabled">Student</label>
-          </div>
         </div>
       </div>
 
@@ -94,15 +89,15 @@
       <!--Radio buttons for Session One time slots-->
       <div *ngIf="sessionOneSelected" class="col-12">
         <div class="form-check">
-            <input class="form-check-input" type="radio" id="timeSlot1" [(ngModel)]="selectedTimeSlotOne" name="timeSlot" value="9AM">
+            <input class="form-check-input" type="radio" id="timeSlot1" [(ngModel)]="selectedTimeSlotOne" name="timeSlot1" value="9AM">
             <label class="form-check-label" for="timeSlot1">10:00 AM - 11:00 AM</label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" id="timeSlot2" [(ngModel)]="selectedTimeSlotOne" name="timeSlot" value="11AM">
+            <input class="form-check-input" type="radio" id="timeSlot2" [(ngModel)]="selectedTimeSlotOne" name="timeSlot1" value="11AM">
             <label class="form-check-label" for="timeSlot2">11:00 AM - 12:00 PM</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" id="timeSlot3" [(ngModel)]="selectedTimeSlotOne" name="timeSlot" value="1PM">
+          <input class="form-check-input" type="radio" id="timeSlot3" [(ngModel)]="selectedTimeSlotOne" name="timeSlot1" value="1PM">
           <label class="form-check-label" for="timeSlot3">1:00 PM - 2:00 PM</label>
         </div>
       </div>
@@ -116,40 +111,48 @@
       <!--Radio buttons for Session Two time slots-->
       <div *ngIf="sessionTwoSelected" class="col-12">
         <div class="form-check">
-            <input class="form-check-input" type="radio" id="timeSlot1" [(ngModel)]="selectedTimeSlotTwo" name="timeSlot" value="9AM">
+            <input class="form-check-input" type="radio" id="timeSlot1" [(ngModel)]="selectedTimeSlotTwo" name="timeSlot2" value="9AM">
             <label class="form-check-label" for="timeSlot1">10:00 AM - 11:00 AM</label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" id="timeSlot2" [(ngModel)]="selectedTimeSlotTwo" name="timeSlot" value="11AM">
+            <input class="form-check-input" type="radio" id="timeSlot2" [(ngModel)]="selectedTimeSlotTwo" name="timeSlot2" value="11AM">
             <label class="form-check-label" for="timeSlot2">11:00 AM - 12:00 PM</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" id="timeSlot3" [(ngModel)]="selectedTimeSlotTwo" name="timeSlot" value="1PM">
+          <input class="form-check-input" type="radio" id="timeSlot3" [(ngModel)]="selectedTimeSlotTwo" name="timeSlot2" value="1PM">
           <label class="form-check-label" for="timeSlot3">1:00 PM - 2:00 PM</label>
         </div>
       </div>
     </div>
 
       <!--Are you a student, faculty, or professional checkboxes-->
-      <div class="col-md-6">
+      <div class="Checkboxes">
         <p class="registersessions">Are you a student, faculty, or professional?</p>
-        <div>
-          <input type="checkbox" id="student" name="title" [(ngModel)]="title" [value]="true">
-          <label for="student" class="checkspace">Student</label>
-        </div>
-        <div>
-          <input type="checkbox" id="faculty" name="title" >
-          <label for="faculty" class="checkspace">Faculty</label>
-        </div>
-        <div>
-          <input type="checkbox" id="professional" name="title" >
-          <label for="professional" class="checkspace">Professional</label>
+
+        <!-- Student Checkbox -->
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="student" name="title" [(ngModel)]="title" [value]="true">
+          <label class="form-check-label" for="student">Student</label>
         </div>
 
-        <div class="school-text" *ngIf = "title">
-          <input type="text" placeholder="School name">
-        </div>
+      <!-- Faculty Checkbox -->
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="faculty" name="title">
+        <label class="form-check-label" for="faculty">Faculty</label>
       </div>
+
+      <!-- Professional Checkbox -->
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="professional" name="title">
+        <label class="form-check-label" for="professional">Professional</label>
+      </div>
+
+      <!-- School Name Text Input (shown if title is selected) -->
+      <div class="school-text" *ngIf="title">
+        <input class="form-control" type="text" placeholder="School name">
+      </div>
+    </div>
+
 
       
       <!--Dinner Attendance radio button-->
