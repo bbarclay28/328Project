@@ -126,25 +126,33 @@
     </div>
 
       <!--Are you a student, faculty, or professional checkboxes-->
-      <div class="col-md-6">
+      <div class="Checkboxes">
         <p class="registersessions">Are you a student, faculty, or professional?</p>
-        <div>
-          <input type="checkbox" id="student" name="title" [(ngModel)]="title" [value]="true">
-          <label for="student" class="checkspace">Student</label>
-        </div>
-        <div>
-          <input type="checkbox" id="faculty" name="title" >
-          <label for="faculty" class="checkspace">Faculty</label>
-        </div>
-        <div>
-          <input type="checkbox" id="professional" name="title" >
-          <label for="professional" class="checkspace">Professional</label>
+
+        <!-- Student Checkbox -->
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="student" name="title" [(ngModel)]="title" [value]="true">
+          <label class="form-check-label" for="student">Student</label>
         </div>
 
-        <div class="school-text" *ngIf = "title">
-          <input type="text" placeholder="School name">
-        </div>
+      <!-- Faculty Checkbox -->
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="faculty" name="title">
+        <label class="form-check-label" for="faculty">Faculty</label>
       </div>
+
+      <!-- Professional Checkbox -->
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="professional" name="title">
+        <label class="form-check-label" for="professional">Professional</label>
+      </div>
+
+      <!-- School Name Text Input (shown if title is selected) -->
+      <div class="school-text" *ngIf="title">
+        <input class="form-control" type="text" placeholder="School name">
+      </div>
+    </div>
+
 
       
       <!--Dinner Attendance radio button-->
