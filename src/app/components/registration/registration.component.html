@@ -21,7 +21,7 @@
 
 <body>
 
-  <form class="form-horizontal" action='' method="POST">
+  <div class="form-horizontal" action='' method="POST">
     <fieldset>
       <div id="legend">
         <legend class="title">Register</legend>
@@ -30,7 +30,7 @@
 
       <div class="formlayout">
         <!--First Name Input-->
-        <form class="row g-3">
+        <div class="row g-3">
           <div class="col-md-6">
             <label for="firstName" class="form-label">First Name</label>
             <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name"
@@ -152,14 +152,15 @@
           <div class="col-md-6">
             <p class="registersessions">Are you a student, faculty, or professional?</p>
             <div>
-              <div *ngFor="let object of objects">
-                <input type="checkbox" [checked]="object.isSelected"> {{object.title}}
+              <div *ngFor="let object of register.attendee.personTypes">
+                <input type="checkbox" [(ngModel)]="object.isSelected" (change)="log()"> {{object.title}}
                 <div>
                 </div>
 
-                <div class="school-text" *ngIf= validateId()>
-                  <input type="text" placeholder="School name">
-                </div>
+
+              </div>
+              <div class="school-text" *ngIf=validateId()>
+                <input type="text" placeholder="School name">
               </div>
             </div>
           </div>
@@ -180,10 +181,10 @@
           <div class="col-12">
             <button class="btn btn-success">Register</button>
           </div>
-        </form>
+        </div>
       </div>
     </fieldset>
-  </form>
+  </div>
 
 </body>
 

@@ -1,7 +1,4 @@
-import { personType} from './persontype.model';
-import {employmentType} from './employment.model';
 import { session } from './session.model';
-import { person } from './person.model';
 import { attendee } from './attendee.model';
 
 export class Register{
