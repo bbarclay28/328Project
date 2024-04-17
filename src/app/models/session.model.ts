@@ -2,7 +2,7 @@ export class session{
     isSessionSelected : boolean;
     sessionId : string;
     sessionName : string;
-    sessionTime : string
+    sessionTime : string;
 
     constructor (){
         this.isSessionSelected = false;
@@ -10,4 +10,9 @@ export class session{
         this.sessionName ="";
         this.sessionTime = "";
     }
+    
+    
+
+     
+
 }
