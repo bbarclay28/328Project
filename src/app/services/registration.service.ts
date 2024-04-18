@@ -1,19 +1,20 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
-  providedIn: 'root'
+  providedIn:'root',
 })
-export class DataService {
+export class RegisterService {
+  private apiUrl = 'http://localhost:3000/data';
 
-    constructor(private httpclient: HttpClient) { }
+  constructor(private http: HttpClient){}
 
-    getData(){
-      return this.httpclient.get('http://localhost:8000/api/users/');
-    }
+  getData(){
+    return this.http.get(this.apiUrl);
+  }
   
-    insertData(data:any){
-      return this.httpclient.post('http://localhost:8000/api/users/',data);
-    }
-
+  postData(data: any){
+    return this.http.post(this.apiUrl, data);
+  }
 }

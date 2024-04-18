@@ -4,6 +4,7 @@ fieldset{
     padding-top: 20px;
 }
 
+
 .formlayout{
     margin-left: 20%;
     margin-right: 20%;
@@ -24,7 +25,7 @@ legend{
 
 .registersessions{
     font-weight: bold;
-    white-space: nowrap
+    
 }
 
 .checkspace{
@@ -33,4 +34,49 @@ legend{
 
 .Checkboxes{
     padding-top:10px;
+}
+
+@media only screen and (max-width: 1024px)  {
+
+    .formlayout{
+        margin-left: 0%;
+        margin-right: 0%;
+        
+    }
+    fieldset{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 50px;
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 390px) and (orientation: portrait) {
+
+    .formlayout{
+        margin-left: 0%;
+        margin-right: 0%;
+        
+    }
+    fieldset{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 50px;
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-height: 844px) and (orientation: landscape) {
+
+    .formlayout{
+        margin-left: 0%;
+        margin-right: 0%;
+        
+    }
+    fieldset{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 50px;
+        padding-top: 20px;
+    }
 }
