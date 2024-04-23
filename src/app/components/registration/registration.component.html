@@ -111,17 +111,17 @@
               <div *ngIf="this.register.sessionOne.isSessionSelected" class="col">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" id="timeSlot1"
-                    [(ngModel)]="this.register.sessionOne.sessionId" name="timeSlot" value="0">
+                    [(ngModel)]="this.register.sessionOne.sessionTime" name="timeSlot" value="10AM - 11AM">
                   <label class="form-check-label" for="timeSlot1">10:00 AM - 11:00 AM</label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" id="timeSlot2"
-                    [(ngModel)]="this.register.sessionOne.sessionId" name="timeSlot" value="1">
+                    [(ngModel)]="this.register.sessionOne.sessionTime" name="timeSlot" value="11AM - 12PM">
                   <label class="form-check-label" for="timeSlot2">11:00 AM - 12:00 PM</label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" id="timeSlot3"
-                    [(ngModel)]="this.register.sessionOne.sessionId" name="timeSlot" value="2">
+                    [(ngModel)]="this.register.sessionOne.sessionTime" name="timeSlot" value="1PM - 2PM">
                   <label class="form-check-label" for="timeSlot3">1:00 PM - 2:00 PM</label>
                 </div>
               </div>
@@ -137,17 +137,17 @@
               <div *ngIf="this.register.sessionTwo.isSessionSelected" class="col">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" id="timeSlot1"
-                    [(ngModel)]="this.register.sessionTwo.sessionId" name="timeSlot" value="0">
+                    [(ngModel)]="this.register.sessionTwo.sessionTime" name="timeSlot" value="10AM - 11AM">
                   <label class="form-check-label" for="timeSlot1">10:00 AM - 11:00 AM</label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" id="timeSlot2"
-                    [(ngModel)]="this.register.sessionTwo.sessionId" name="timeSlot" value="1">
+                    [(ngModel)]="this.register.sessionTwo.sessionTime" name="timeSlot" value="11AM - 12PM">
                   <label class="form-check-label" for="timeSlot2">11:00 AM - 12:00 PM</label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" id="timeSlot3"
-                    [(ngModel)]="this.register.sessionTwo.sessionId" name="timeSlot" value="2">
+                    [(ngModel)]="this.register.sessionTwo.sessionTime" name="timeSlot" value="1PM - 2PM">
                   <label class="form-check-label" for="timeSlot3">1:00 PM - 2:00 PM</label>
                 </div>
               </div>
@@ -189,7 +189,7 @@
           <br>
           <!--Register Button-->
           <div class="col">
-            <button type="button" class="btn btn-success" (click)="submitData()">Register</button>
+            <button type="button" class="btn btn-success" (click)="log()">Register</button>
           </div>
         </div>
       </div>
